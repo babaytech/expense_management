@@ -9,9 +9,9 @@
     <div class="card-body">
       <h4 class="card-title">{{ s.bank_name }}</h4>
       <p class="card-text">{{ s.amount }}</p>
-      <a href="{{ url_for('income') }}" class="card-link btn btn-primary">приход</a>
-      <a href="{{ url_for('waste') }}" class="card-link btn btn-primary">расход</a>
-      <a href="{{ url_for('edit_score') }}" class="card-link btn btn-primary">изменить</a>
+      <a href="{{ url_for('income', username=current_user.username) }}" class="card-link btn btn-primary">приход</a>
+      <a href="{{ url_for('waste', username=current_user.username) }}" class="card-link btn btn-primary">расход</a>
+      <a href="{{ url_for('edit_score', username=current_user.username) }}" class="card-link btn btn-primary">изменить</a>
     </div>
   </div>
   {% endfor %}
